@@ -1,13 +1,13 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM '* * * * *'
-
-    }
+//     triggers {
+//         pollSCM '* * * * *'
+//
+//     }
     stages {
         stage('Build') {
             steps {
-                bat 'gradlew build'
+                sh 'gradlew build'
             }
         }
 //          stage('Test') {

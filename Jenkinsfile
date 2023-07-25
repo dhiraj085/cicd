@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gradle build'
+                sh 'gradlew build'
             }
         }
 //          stage('Test') {
@@ -17,7 +17,7 @@ pipeline {
 //         }
         stage('Build Docker Image') {
             steps {
-                sh 'gradle docker -x test'
+                sh 'gradlew docker -x test'
             }
         }
         stage('Run Docker Image') {

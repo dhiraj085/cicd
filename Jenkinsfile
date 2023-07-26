@@ -17,12 +17,13 @@ pipeline {
 //         }
         stage('Build Docker Image') {
             steps {
-                sh 'gradlew docker -x test'
+                sh './gradlew docker -x test'
             }
         }
+
         stage('Run Docker Image') {
             steps {
-                sh 'gradle dockerRun'
+                sh './gradle dockerRun'
             }
         }
     }
